@@ -113,13 +113,13 @@ Kafka Listeners is a Java application demonstrating basic interactions with Apac
 If the application runs successfully, you should see the following output:
 
 ```bash
-🥾 Bootstrap server: localhost:9002
+🥾 Bootstrap server: localhost:9092
 
-✅ Connected to bootstrap server(localhost:9002) and it returned metadata for brokers listed below:
+✅ Connected to bootstrap server(localhost:9092) and it returned metadata for brokers listed below:
 
-👉 Broker ID: 1, Host: broker1.jmpx2.de, Port: 9001
-👉 Broker ID: 2, Host: broker2.jmpx2.de, Port: 9002
-👉 Broker ID: 3, Host: broker3.jmpx2.de, Port: 9003
+👉 Broker ID: 1, Host: 10.105.63.222, Port: 9092
+👉 Broker ID: 2, Host: 10.105.63.223, Port: 9092
+👉 Broker ID: 3, Host: 10.105.63.227, Port: 9092
 
 ---------------------
 ℹ️  This step confirms the successful bootstrap connection and provides broker metadata required for consumer resolution.
@@ -128,10 +128,10 @@ If the application runs successfully, you should see the following output:
 
 
 <Producing>
-✅  📬  Message delivered: "test_topic-0@1" to test_topic [partition 0]
+✅  📬  Message delivered: "foo / 2023-12-21T21:28:40.258" to test_topic [partition 0]
 
 <Consuming>
-✅  💌  Message received: "foo / 2023-12-21T21:20:52.705" from topic test_topic
+✅  💌  Message received: "foo / 2023-12-21T21:28:40.258" from topic test_topic
 ```
 
 ## Additional Notes
