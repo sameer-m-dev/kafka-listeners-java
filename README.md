@@ -15,6 +15,11 @@ Kafka Listeners is a Java application demonstrating basic interactions with Apac
   - Consumes messages from the same topic.
 - Error handling mechanisms and robust configurations
 - Maven-based project for easy dependency management and building
+- Java based implementation for - [Kafka Listeners](https://github.com/rmoff/kafka-listeners)
+
+- Check out the following resources for more information on Kafka Listeners:
+    - [My Python/Java/Spring/Go/Whatever Client Won’t Connect to My Apache Kafka Cluster in Docker/AWS/My Brother’s Laptop. Please Help!](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/?utm_source=github&utm_medium=rmoff&utm_campaign=ty.community.con.rmoff-listeners&utm_term=rmoff-devx)
+    - [Kafka Listeners – Explained](https://www.confluent.io/blog/kafka-listeners-explained/?utm_source=github&utm_medium=rmoff&utm_campaign=ty.community.con.rmoff-listeners&utm_term=rmoff-devx)
 
 ## 🛠️ Prerequisites
 
