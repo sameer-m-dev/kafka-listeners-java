@@ -32,7 +32,7 @@
 				<configuration>
 					<mainClass>com.example.kafka.KafkaTestClient</mainClass>
 					<arguments>
-						<argument>localhost:9002</argument>
+						<argument>localhost:9092</argument>
 						<!-- Replace with your Kafka broker address -->
 					</arguments>
 				</configuration>

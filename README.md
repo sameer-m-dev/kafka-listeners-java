@@ -107,8 +107,32 @@ Kafka Listeners is a Java application demonstrating basic interactions with Apac
 2. Execute the following command to run the KafkaTestClient application, passing the Kafka broker address as an argument:
 
     ```bash
-    java -jar KafkaTestClient.jar localhost:9092
+    java -jar kafka-listeners-java-1.0.jar localhost:9092
     ```
+
+If the application runs successfully, you should see the following output:
+
+```bash
+🥾 Bootstrap server: localhost:9002
+
+✅ Connected to bootstrap server(localhost:9002) and it returned metadata for brokers listed below:
+
+👉 Broker ID: 1, Host: broker1.jmpx2.de, Port: 9001
+👉 Broker ID: 2, Host: broker2.jmpx2.de, Port: 9002
+👉 Broker ID: 3, Host: broker3.jmpx2.de, Port: 9003
+
+---------------------
+ℹ️  This step confirms the successful bootstrap connection and provides broker metadata required for consumer resolution.
+ℹ️  Ensure your client can resolve the broker(s) shown in the metadata above.
+ℹ️  If the listed host(s) are inaccessible from your client, consider adjusting the advertised.listener configuration on Kafka broker(s).
+
+
+<Producing>
+✅  📬  Message delivered: "test_topic-0@1" to test_topic [partition 0]
+
+<Consuming>
+✅  💌  Message received: "foo / 2023-12-21T21:20:52.705" from topic test_topic
+```
 
 ## Additional Notes
 

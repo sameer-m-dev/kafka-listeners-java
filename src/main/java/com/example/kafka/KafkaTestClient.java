@@ -60,15 +60,16 @@ public class KafkaTestClient {
         producerProps.put("bootstrap.servers", bootstrapServer);
         producerProps.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         producerProps.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        String message = "foo / " + java.time.LocalDateTime.now();
 
         try (Producer < String, String > producer = new KafkaProducer < > (producerProps)) {
-            producer.send(new ProducerRecord < > (TOPIC, "foo / " + java.time.LocalDateTime.now()), new Callback() {
+            producer.send(new ProducerRecord < > (TOPIC, message), new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata metadata, Exception exception) {
                     if (exception != null) {
                         System.out.println("❌ Message delivery failed: " + exception.getMessage());
                     } else {
-                        System.out.println("✅  📬  Message delivered: \"" + metadata + "\" to " +
+                        System.out.println("✅  📬  Message delivered: \"" + message + "\" to " +
                             metadata.topic() + " [partition " + metadata.partition() + "]");
                     }
                 }
